@@ -2,6 +2,7 @@ import Header from "../components/header";
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
+import Box from "../components/box";
 
 const CompletedTask = () => {
     const navigate = useNavigate()
@@ -37,14 +38,7 @@ const CompletedTask = () => {
                                     <>
                                         {item.taskCompletionRate == 100 ? (
                                             <>
-                                                <Col lg={3}>
-                                                    <div className='to-do-item'>
-                                                        <h5>Task Name : {item.taskName}</h5>
-                                                        <p>Task Desc : {item.taskDesc}</p>
-                                                        <p>Task DueDate : {item.dueDate}</p>
-                                                        <p>Task CompletionRate : {item.taskCompletionRate}</p>
-                                                    </div>
-                                                </Col>
+                                                <Box item = {item} taskStatus="complete" />
                                             </>
                                         ) : ''}
                                     </>

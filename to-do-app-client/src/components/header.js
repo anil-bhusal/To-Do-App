@@ -13,7 +13,7 @@ const Header = () => {
               <Col lg={3}>
                 <div className="left-part">
                   <ul>
-                    <li><Link to="/">LOGO</Link></li>
+                    <li><Link to="/">to-do</Link></li>
                   </ul>
                 </div>
               </Col>

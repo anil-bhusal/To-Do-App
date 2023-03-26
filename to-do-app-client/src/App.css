@@ -29,6 +29,8 @@ header .left-part ul li a{
     color: #cca963;
     font-size: 26px;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 header .right-part ul {

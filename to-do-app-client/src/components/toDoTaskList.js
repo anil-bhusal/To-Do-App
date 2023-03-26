@@ -1,18 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { Container, Row, Col } from 'react-bootstrap';
-import { message, Popconfirm, Modal } from 'antd';
-import CreateToDoTask from './createToDoTask';
+import { Container, Row } from 'react-bootstrap';
+import Box from './box';
 
 const ToDoTaskList = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const showModal = () => {
-        setIsModalOpen(true);
-    };
-    const handleCancel = () => {
-        setIsModalOpen(false);
-    };
-
     const navigate = useNavigate()
 
     const [toDoList, setToDoList] = useState([])
@@ -43,18 +34,7 @@ const ToDoTaskList = () => {
                                     <>
                                         {item.taskCompletionRate < 100 ? (
                                             <>
-                                                <Col lg={3}>
-                                                    <div className='to-do-item'>
-                                                        <h5>Task Name : {item.taskName}</h5>
-                                                        <p>Task Desc : {item.taskDesc}</p>
-                                                        <p>Task DueDate : {item.dueDate}</p>
-                                                        <p>Task CompletionRate : {item.taskCompletionRate}</p>
-                                                        <button className='btn' onClick={showModal}>Update Status</button>
-                                                        <Modal open={isModalOpen} onCancel={handleCancel} footer={null}>
-                                                            <CreateToDoTask name="edit" fillForm={item} fetchData={fetchData} />
-                                                        </Modal>
-                                                    </div>
-                                                </Col>
+                                                <Box item = {item} fetchData = {fetchData} />
                                             </>
                                         ) : ''}
                                     </>
