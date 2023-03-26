@@ -8,8 +8,9 @@ import { message } from 'antd';
 const toDoTaskSchema = Yup.object().shape({
     taskName: Yup.string().required('Required'),
     taskDesc: Yup.string().required('Required'),
-    dueDate: Yup.string().required('Required'),
-    taskCompletionRate: Yup.string().required('Required'),
+    // dueDate: Yup.date().min(new Date(), 'Date must be today or later'),
+    dueDate: Yup.date().required('Required'),
+    taskCompletionRate: Yup.number().max(100, 'Task Completion Rate must be less than 100%'),
 });
 
 const CreateToDoTask = (props) => {
@@ -67,7 +68,7 @@ const CreateToDoTask = (props) => {
                             <Field name="dueDate" type="date" placeholder="task due date" value={values.dueDate} onChange={handleChange} onBlur={handleBlur} />
                             {errors.dueDate && touched.dueDate ? (<div className="error">{errors.dueDate}</div>) : null}
 
-                            <Field name="taskCompletionRate" type="percentage" placeholder="task completion rate" value={values.taskCompletionRate} onChange={handleChange} onBlur={handleBlur} />
+                            <Field name="taskCompletionRate" type="percentage" placeholder="task completion rate in %" value={values.taskCompletionRate} onChange={handleChange} onBlur={handleBlur} />
                             {errors.taskCompletionRate && touched.taskCompletionRate ? (<div className="error">{errors.taskCompletionRate}</div>) : null}
 
                             <button className='btn btn-success' type="submit">{props.name ? "edit task" : "add task"}</button>
