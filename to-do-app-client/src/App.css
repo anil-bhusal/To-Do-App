@@ -22,10 +22,11 @@ header .row {
     align-items: center;
 }
 
-header .left-part ul li{
+header .left-part ul li {
     list-style: none;
 }
-header .left-part ul li a{
+
+header .left-part ul li a {
     color: #cca963;
     font-size: 26px;
     text-decoration: none;
@@ -125,26 +126,31 @@ input[type=number] {
     padding: 100px 0 50px 0;
     text-align: center;
 }
-.to-do-list h1{
+
+.to-do-list h1 {
     padding: 20px 0;
     margin-bottom: 30px;
     font-size: 38px;
     color: #cca963;
     text-transform: capitalize;
 }
-.to-do-list .to-do-item{
+
+.to-do-list .to-do-item {
     background-color: #f0f8ff;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
     padding: 30px 0;
     margin-bottom: 30px;
 }
-.to-do-list .to-do-item h5{
+
+.to-do-list .to-do-item h5 {
     padding: 10px 0;
 }
-.to-do-list .to-do-item p{
+
+.to-do-list .to-do-item p {
     padding: 5px 0;
 }
-.to-do-list .to-do-item button{
+
+.to-do-list .to-do-item button {
     padding: 8px 16px;
     color: #000;
     background-color: #cca963;
@@ -163,3 +169,34 @@ input[type=number] {
     background-color: transparent;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
+
+/* task completion rate */
+.to-do-list p{
+    text-align: center;
+    text-transform: capitalize;
+}
+.to-do-list span{
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #ffcccb;
+    padding: 0 6px;
+}
+.to-do-list form {
+  margin-top: 70px;
+}
+
+.to-do-list .completion-rate p{
+  background-color: #cca963;
+  height: 30px;
+  color: white;
+  width: 40%;
+  font-weight: bold;
+  margin: 70px 0;
+  padding: 29px 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 31%;
+  position: absolute;
+}
+  

@@ -17,15 +17,16 @@ const Header = () => {
                   </ul>
                 </div>
               </Col>
-              <Col lg={5}>
+              <Col lg={2}>
 
               </Col>
-              <Col lg={4}>
+              <Col lg={6}>
                 <div className="right-part">
                   <ul>
                     <li><Link to="/">add task</Link></li>
                     <li><Link to="/task-list">task list</Link></li>
                     <li><Link to="/completed-task">completed task</Link></li>
+                    <li><Link to="/task-completion-rate">task completion rate</Link></li>
                   </ul>
                 </div>
               </Col>
