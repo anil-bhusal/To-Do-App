@@ -21,6 +21,8 @@ const Header = () => {
 
               </Col>
               <Col lg={6}>
+
+                
                 <div className="right-part">
                   <ul>
                     <li><Link to="/">add task</Link></li>
